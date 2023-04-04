@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somando valores</title>
+    <style>
+        body {
+            color: purple;
+            background-color: black;
+            font: normal 18pt Arial;
+            text-align: center;
+        }
+        #res{
+            color: yellow;
+            background-color: blueviolet;
+           margin-top: 40px ;
+           margin-left: 80px;
+           margin-right: 80px;
+
+        }
+        input {
+            font: normal 18pt Arial;
+            width: 400px;
+        }
+        #resu {
+            color: yellow;
+            background-color: blueviolet;
+           margin-top: 40px ;
+           margin-left: 80px;
+           margin-right: 80px;
+        }
+        #resut {
+            color: yellow;
+            background-color: blueviolet;
+           margin-top: 40px ;
+           margin-left: 80px;
+           margin-right: 80px;
+        }
+        #resuta{
+            color: yellow;
+            background-color: blueviolet;
+           margin-top: 40px ;
+           margin-left: 80px;
+           margin-right: 80px;
+        }
+        #re{
+            color: yellow;
+            background-color: blueviolet;
+           margin-top: 40px ;
+           margin-left: 80px;
+           margin-right: 80px;
+        }
+    </style>
+</head>
+
+
+<body>
+    <h1>Somando valores</h1>
+    <input type="number" name="txtn1" id="txtn1"> +
+    <input type="number" name="txtn2" id="txtn2"> +
+    <input type="number" name="txtn3" id="txtn3">
+    <input type="button" value="Somar" onclick = "somar()">
+    <div id = "res"> Resultado </div>
+
+    <h1>Subtraindo valores</h1>
+    <input type="number" name="menos1" id="menos1"> -
+    <input type="number" name="menos2" id="menos2"> -
+    <input type="number" name="menos3" id="menos3">
+    <input type="button" value="subtraia" onclick = "subtração()">
+    <div id = "re"> Resultado </div>
+
+    <h1>Multiplicando valores</h1>
+    <input type="number" name="multiplica1" id="multiplica1"> x
+    <input type="number" name="multiplica2" id="multiplica2">
+    <input type="button" value="Multiplica" onclick = "multiplica()">
+    <div id = "resu"> Resultado </div>
+
+    <h1>Dividindo valores</h1>
+    <input type="number" name="divide1" id="divide1"> :
+    <input type="number" name="divide2" id="divide2">
+    <input type="button" value="divida" onclick = "divide()">
+    <div id = "resut"> Resultado </div>
+
+    <h1>Potência valores</h1>
+    <input type="number" name="potencia1" id="potencia1"> ^
+    <input type="number" name="potencia2" id="potencia2">
+    <input type="button" value="calcular" onclick = "calcular()">
+    <div id = "resuta"> Resultado </div>
+     
+    <script>
+        function somar() {
+            var tn1 = window.document.getElementById('txtn1')
+            var tn2 = window.document.querySelector('input#txtn2')
+            var tn3 = window.document.querySelector('input#txtn3')
+            var res =  window.document.querySelector('div#res')
+            var n1 = Number (tn1.value)
+            var n2 = Number (tn2.value)
+            var n3 = Number (tn3.value)
+            var s = n1 + n2 + n3
+            res.innerHTML= `A soma entre ${n1} e ${n2} e ${n3} é igual <strong>${s}</strong>`
+        }
+        function multiplica() {
+            var tx1 = window.document.getElementById('multiplica1')
+            var tx2 = window.document.querySelector('input#multiplica2')
+            var resu =  window.document.querySelector('div#resu')
+            var xn1 = Number (tx1.value)
+            var xn2 = Number (tx2.value)
+            var sx = xn1 * xn2
+            resu.innerHTML= `A multiplicação entre ${xn1} e ${xn2} é igual <strong>${sx}</strong>`
+        }
+        function divide() {
+            var ty1 = window.document.getElementById('divide1')
+            var ty2 = window.document.querySelector('input#divide2')
+            var resut =  window.document.querySelector('div#resut')
+            var yn1 = Number (ty1.value)
+            var yn2 = Number (ty2.value)
+            var sy = yn1 / yn2
+            var dy = yn1 % yn2
+            resut.innerHTML= `A divisão entre ${yn1} e ${yn2} é igual <strong>${sy}</strong> com resto <strong>${dy}</strong>`
+        }
+        function calcular() {
+            var tz1 = window.document.getElementById('potencia1')
+            var tz2 = window.document.querySelector('input#potencia2')
+            var resuta =  window.document.querySelector('div#resuta')
+            var zn1 = Number (tz1.value)
+            var zn2 = Number (tz2.value)
+            var sz = zn1 ** zn2
+            resuta.innerHTML= `A potenciação entre ${zn1} e ${zn2} é igual <strong>${sz}</strong>`
+        }
+        function subtração (){
+            var ta1 = window.document.getElementById('menos1')
+            var ta2 = window.document.querySelector('input#menos2')
+            var ta3 = window.document.querySelector('input#menos3')
+            var resuta =  window.document.querySelector('div#re')
+            var an1 = Number (ta1.value)
+            var an2 = Number (ta2.value)
+            var an3 = Number (ta3.value)
+            var sa = an1 - an2 - an3
+            resuta.innerHTML= `A subtração entre ${an1} e ${an2} e ${an3} é igual <strong>${sa}</strong>`
+        }
+        
+
+    </script>
+</body>
+</html>
